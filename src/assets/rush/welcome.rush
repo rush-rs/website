@@ -1,0 +1,4 @@
+fn main() {
+    let hello = 'w'+'e'+'l'+'c'+'o'+'m'+'e';
+    exit(hello as int);
+}
