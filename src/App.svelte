@@ -1,29 +1,8 @@
 <script lang="ts">
     import rushLogo from '/rush_logo.svg'
-    // import { onMount } from 'svelte'
-    //
-    // // rush scripts
-    // import rushWelcome from './assets/rush/welcome.rush?raw'
-    //
-    // const scripts = [rushWelcome]
-    // let currRush = ''
-    // let currRushIdx = 0
-    //
-    // function update() {
-    //     if (currRushIdx + 1 == scripts.length) {
-    //         currRushIdx = 0
-    //     } else {
-    //         currRushIdx += 1
-    //     }
-    //
-    //     currRush = scripts[currRushIdx]
-    //
-    //     setTimeout(this, 10_000)
-    // }
-    //
-    // onMount(() => {
-    //     update()
-    // })
+    import report from '/bringing_the_rush_programming_language_to_the_s390x_architecture.pdf'
+    // NOTE: Will only be used if the HPI link dies.
+    // import article from '/article.pdf'
 </script>
 
 <main id="app">
@@ -31,10 +10,13 @@
         <img src={rushLogo} id="logo" alt="rush Logo" />
     </a>
 
-    <h1>The rush Programming Language</h1>
+    <h1>The rush Programming Language: <a href="https://www.ibm.com/history/system-390" target="_blank" rel="noreferrer"><b>S/390x</b></a> Version</h1>
     <h2>
         A simple programming language for researching different ways of program execution and
         compilation.
+
+        <br>
+        Forked to support code generation for IBM S/390x GNU Assembly.
     </h2>
 
     <!-- <div id="rush-demo"> -->
@@ -48,18 +30,13 @@
 
     <div id="buttons">
         <button>
-            <a href="https://paper.rush-lang.de" target="_blank" rel="noreferrer"> Paper </a>
+            <a href={report} target="_blank" rel="noreferrer"> Technical Report </a>
         </button>
         <button>
-            <a href="https://play.rush-lang.de" target="_blank" rel="noreferrer"> Playground </a>
+            <a href="https://github.com/rush-rs/rush/tree/s390x/crates/rush-compiler-s390x" target="_blank" rel="noreferrer"> GitHub </a>
         </button>
         <button>
-            <a href="https://presentation.rush-lang.de" target="_blank" rel="noreferrer">
-                Presentation
-            </a>
-        </button>
-        <button>
-            <a href="https://github.com/rush-rs" target="_blank" rel="noreferrer"> GitHub </a>
+            <a href="https://hpi.de/artikel/studierende-lernen-auf-ibm-grossrechner-mit-echtzeit-ki/" target="_blank" rel="noreferrer"> IBM Event at HPI </a>
         </button>
     </div>
 
